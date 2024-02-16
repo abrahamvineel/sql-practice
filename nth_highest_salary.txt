@@ -1,0 +1,4 @@
+select s.salary from (
+	select distinct salary from employees order by salary desc limit 2
+) as s
+order by salary limit 1
