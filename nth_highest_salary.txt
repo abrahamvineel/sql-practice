@@ -1,3 +1,5 @@
+-- In the inner subquery take the nth value limit with order by desc which will get top n highest sal employees
+-- then do another order by with asc which will get the nth value and limit 1 will get only one value.
 select s.salary from (
 	select distinct salary from employees order by salary desc limit 2
 ) as s
