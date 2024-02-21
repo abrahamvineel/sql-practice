@@ -4,3 +4,16 @@ select s.salary from (
 	select distinct salary from employees order by salary desc limit 2
 ) as s
 order by salary limit 1
+
+
+-- using with 
+
+WITH RESULT AS
+(
+    SELECT SALARY,
+           DENSE_RANK() OVER (ORDER BY SALARY DESC) AS DENSERANK
+    FROM EMPLOYEES
+)
+SELECT TOP 1 SALARY
+FROM RESULT
+WHERE DENSERANK = N
