@@ -5,7 +5,6 @@ select s.salary from (
 ) as s
 order by salary limit 1
 
-
 -- using with 
 
 WITH RESULT AS
