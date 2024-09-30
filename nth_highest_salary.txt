@@ -7,7 +7,6 @@ order by salary limit 1
 
 -- using with 
 
-
 WITH RESULT AS
 (
     SELECT SALARY,
